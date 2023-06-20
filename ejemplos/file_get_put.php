@@ -1,13 +1,16 @@
 <?php
+    //creating variables
+    $file = 'people.txt';
     // Create file:
-    file_put_contents('people.txt', 'person1, person2, person3');
+    file_put_contents($file, 'person1, person2, person3');
     // Read file:
-    $file = file_get_contents('people.txt');
-    echo $file . "\n\n";
+    $file_initial = file_get_contents($file);
+    //echo $file_initial . "\n\n";
+    
     // Add data to the file, using FILE_APPEND as the flag to add it to the end of the file
-    file_put_contents('people.txt', ', person4', FILE_APPEND);
-    $file = file_get_contents('people.txt');
-    echo $file;
+    file_put_contents($file, ', person4', FILE_APPEND);
+    $file_modified = file_get_contents($file);
+    //echo $file;
 ?>
 
 <!DOCTYPE html>
@@ -18,10 +21,18 @@
     <title>File_get_put</title>
 </head>
 <body>
-    <h1>Ejemplo sobre el uso de las funciones:</h1></br>
+    <h1>Ejemplo sobre el uso de las funciones:</h1></b>
     <h2>file_get_contents</h2>
     <h2>file_put_contents</h2></br></br>
 
+    <h4>Contenido del archivo al ser creado y su contenido</h4>
+    <textarea>
+        <?=$file_initial?>    
+    </textarea></br>
 
+    <h4>Contenido del archivo al ser modificado y agregando datos al final del contenido del archivo</h4>
+    <textarea>
+        <?=$file_modified?>    
+    </textarea></br> 
 </body>
 </html>
