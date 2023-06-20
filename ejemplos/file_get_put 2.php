@@ -1,15 +1,12 @@
 <?php
     //creating variables
     $file = 'archivo.txt';
-    // Reading the file:
-    $file_last = file_get_contents($file);
-    
-    // Add data to the file, using FILE_APPEND as the flag to add it to the end of the file
-    // file_put_contents($file, ', person4', FILE_APPEND);
     
     //Adding the text from the textarea to the file = archivo.txt
     $file_new = file_put_contents($file, $_GET['texto']);
-    //echo $file;
+    
+    // Reading the file:
+    $file_last = file_get_contents($file);
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +17,7 @@
     <title>File_get_put2</title>
 </head>
 <body>
+    <a href="index.php">Volver a la pagina INICIO</a>
     <h1>Ejemplo sobre el uso de las funciones y $_GET</h1></b>
     <h2>file_get_contents</h2>
     <h2>file_put_contents</h2>
