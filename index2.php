@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
     /* $archivo = 'vacio.txt';
     //Funcion PHP para leer archivos
     $texto = file_get_contents($archivo);
@@ -18,4 +19,9 @@
     file_put_contents('vacio.txt', ', person4', FILE_APPEND);
     $file = file_get_contents('vacio.txt');
     echo $file;
+=======
+
+echo "Hello mundo de php";
+
+>>>>>>> 1df7a322681099a2d0ca3696dfb5344eaa4df6cf
 ?>
