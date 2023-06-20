@@ -21,6 +21,7 @@
     <title>File_get_put</title>
 </head>
 <body>
+    <a href="index.php">Volver a la pagina INICIO</a>
     <h1>Ejemplo sobre el uso de las funciones:</h1></b>
     <h2>file_get_contents</h2>
     <h2>file_put_contents</h2></br></br>
