@@ -29,7 +29,7 @@
         de esta manera modificaremos el archivo con el contenidon del texto del textarea
     </p>
     <h4>Archivo (archivo.txt) con la ultima modificacion</h4>
-    <textarea><?=$file_last?></textarea></br>
+    <textarea readonly><?=$file_last?></textarea></br>
 
     <form>
         <h4>Escribe aqui el contenido que quieres reemplazar en el archivo (archivo.txt)</h4>
