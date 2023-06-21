@@ -1,0 +1,1 @@
+Gracias por tu visita, espero que la hayas pasado bien y que este ejemplo te haya ayudado a conocer mas sobre la maravilla de PHP.
