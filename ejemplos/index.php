@@ -13,7 +13,7 @@ if ($handle = opendir('.')) {
 }
 ?>
 
-<P>List of files:</p>
+<P>List de archivos:</p>
 <UL>
 <P><?=$thelist?></p>
 </UL>
