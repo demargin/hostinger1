@@ -53,9 +53,7 @@
 
     <textarea readonly><?=$file_last?></textarea></br>
     <input type="submit" value="Cargar" name="accion"/>
-    </form>
 
-    <form>
         <h4>Escribe aqui el contenido que quieres reemplazar en el archivo </h4>
         <textarea name="texto"></textarea></br>
         <input type="submit" value="Guardar" name="accion"/>
