@@ -6,7 +6,9 @@
 	$esProgramador = false;
 	$nombre = "Martin";
 	//Aqui php renderiza en html e imprime el texto con las variables.
-	echo "Bienvenido " . $nombre . "<br/>" . "Tu edad es : " . $edad . " años";
+	//echo "Bienvenido " . $nombre . "<br/>" . "Tu edad es : " . $edad . " años";
+	
+	echo "Bienvenido " . $nombre . "\n" . "Tu edad es : " . $edad . " años";
 ?>
 
 <!DOCTYPE html>
