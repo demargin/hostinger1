@@ -24,6 +24,8 @@
 	<title><?=$TittlePage?></title>
 </head>
 <body>
+	
+	<br/>
 	Hola mundo de PHP
 	<br/>
 	<a href="index.php">Volver a la pagina INICIO</a>
