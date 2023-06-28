@@ -6,9 +6,9 @@
     $suma = $a + $b;
     $resta = $a - $b;
     $multi = $a * $b;
-    $poten = $a ++ $b;
+    $poten = $a ** $b;
     $divi = $a / $b;
-    $modulo = $a % $b ;
+    $modulo = $a % $b;
     $ident = +$c;
     $negac = -$a;
 ?>
