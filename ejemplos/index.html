@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos PHP</title>
+</head>
+<body>
+    <?php
+    if ($handle = opendir('.')) {
+        while (false !== ($file = readdir($handle)))
+        {
+            if (($file != ".") 
+             && ($file != ".."))
+            {
+                $thelist .= '<LI><a href="'.$file.'">'.$file.'</a>';
+            }
+        }
+    
+        closedir($handle);
+    }
+    ?>
+    
+    <P>List de archivos:</p>
+    <UL>
+    <P><?=$thelist?></p>
+    </UL>
+    
+</body>
+</html>
