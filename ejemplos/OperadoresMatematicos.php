@@ -22,12 +22,13 @@
     <title>Operadores Matematicos</title>
 </head>
 <body>
-    <p>
-        para ejemplificar los operadores en PHP usaremos los siguuiente valores:
-            a = 5 
-            b = 3
-            c = "7"
-    </p>
+    <h2>
+        Para ejemplificar los operadores en PHP usaremos los siguiente valores:
+
+        </h2>
+        <h3> ----> a = 5</h3>
+        <h3> ----> b = 3</h3>
+        <h3> ----> c = "7"</h3>
     <h3>la suma de a + b = <?=$suma?></h3>
     <h3>la resta de a - b = <?=$resta?></h3>
     <h3>la multiplicacion de a x b = <?=$multi?></h3>
