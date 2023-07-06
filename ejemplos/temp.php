@@ -17,16 +17,20 @@
   <input type="submit" value="Enviar">
 </form>
 
-
 <script>
-  var selectElement = document.querySelector('select');
+  var radioButtons = document.querySelectorAll('input[type="radio"]');
   var maxSelections = 2;
+  var numSelections = 0;
 
-  selectElement.addEventListener('change', function(event) {
-    var selectedOptions = Array.from(this.selectedOptions);
-    if (selectedOptions.length > maxSelections) {
-      selectedOptions.shift().selected = false;
-    }
+  radioButtons.forEach(function(radioButton) {
+    radioButton.addEventListener('click', function() {
+      var selectedRadios = document.querySelectorAll('input[type="radio"]:checked');
+      numSelections = selectedRadios.length;
+
+      if (numSelections > maxSelections) {
+        this.checked = false;
+      }
+    });
   });
 </script>
 
