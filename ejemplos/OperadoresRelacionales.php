@@ -20,6 +20,10 @@
         Para ejemplificar los operadores en PHP usaremos los siguiente valores:
 
         </h3>
+        <ul>
+            <li><h4> ----> a = 5</h4></li>
+        </ul>
+        
         <h4> ----> a = 5</h4>
         <h4> ----> b = 3</h4>
         <h4> ----> c = "5"</h4>
