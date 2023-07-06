@@ -1,16 +1,10 @@
 <?php
     $a = 5;
     $b = 3;
-    $c = "7";
+    $c = "5";
+    $d = 7;
 
-    $suma = $a + $b;
-    $resta = $a - $b;
-    $multi = $a * $b;
-    $poten = $a ** $b;
-    $divi = $a / $b;
-    $modulo = $a % $b;
-    $ident = +$c;
-    $negac = -$a;
+    $igualdad = echo ($a == $b) ? "Los valores son iguales" : "Los valores son diferentes";
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <a href="index.php">Volver a la pagina INICIO</a>
-    <title>Operadores Matematicos</title>
+    <title>Operadores Relacionales</title>
 </head>
 <body>
     <h2>
