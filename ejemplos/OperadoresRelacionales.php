@@ -1,10 +1,16 @@
 <?php
     $a = 5;
     $b = 3;
-    $c = "5";
-    $d = 11; 
+    $c = "7";
 
-    $igualdad echo ($valor1 == $valor2) ? "Los valores son iguales" : "Los valores son diferentes";
+    $suma = $a + $b;
+    $resta = $a - $b;
+    $multi = $a * $b;
+    $poten = $a ** $b;
+    $divi = $a / $b;
+    $modulo = $a % $b;
+    $ident = +$c;
+    $negac = -$a;
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +29,6 @@
         <h3> ----> a = 5</h3>
         <h3> ----> b = 3</h3>
         <h3> ----> c = "7"</h3>
-
     <h3>la suma de a + b = <?=$suma?></h3>
     <h3>la resta de a - b = <?=$resta?></h3>
     <h3>la multiplicacion de a x b = <?=$multi?></h3>
