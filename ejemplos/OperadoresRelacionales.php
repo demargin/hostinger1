@@ -16,14 +16,18 @@
     <title>Operadores Relacionales</title>
 </head>
 <body>
-    <h2>
+    <h3>
         Para ejemplificar los operadores en PHP usaremos los siguiente valores:
 
-        </h2>
-        <h3> ----> a = 5</h3>
-        <h3> ----> b = 3</h3>
-        <h3> ----> c = "7"</h3>
-    <h3>valor de a es igual al valor de b? a==b? :: <?=$igualdad?></h3>
-    
+        </h3>
+        <h4> ----> a = 5</h4>
+        <h4> ----> b = 3</h4>
+        <h4> ----> c = "5"</h4>
+        <h4> ----> d = "7"</h4>
+        <ol>
+            <li>Igualdad >>>> a==b? :: <b><?=$igualdad?></b></li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ol>
 </body>
 </html>
