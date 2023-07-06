@@ -4,7 +4,7 @@
     $c = "5";
     $d = 7;
 
-    $igualdad = echo ($a == $b) ? "Los valores son iguales" : "Los valores son diferentes";
+    $igualdad = ($a == $b) ? "Los valores son iguales" : "Los valores son diferentes";
 ?>
 
 <!DOCTYPE html>
