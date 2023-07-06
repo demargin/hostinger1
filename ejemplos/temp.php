@@ -8,16 +8,15 @@
 <body>
 
 <form action="procesar.php" method="GET">
-  <select name="opciones[]" multiple>
-    <option value="opcion1">Opción 1</option>
-    <option value="opcion2">Opción 2</option>
-    <option value="opcion3">Opción 3</option>
-    <option value="opcion4">Opción 4</option>
-    <option value="opcion5">Opción 5</option>
-  </select>
-
+  <input type="radio" name="opcion" value="opcion1"> Opción 1<br>
+  <input type="radio" name="opcion" value="opcion2"> Opción 2<br>
+  <input type="radio" name="opcion" value="opcion3"> Opción 3<br>
+  <input type="radio" name="opcion" value="opcion4"> Opción 4<br>
+  <input type="radio" name="opcion" value="opcion5"> Opción 5<br>
+  
   <input type="submit" value="Enviar">
 </form>
+
 
 <script>
   var selectElement = document.querySelector('select');
