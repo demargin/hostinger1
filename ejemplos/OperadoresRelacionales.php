@@ -23,13 +23,7 @@
         <h3> ----> a = 5</h3>
         <h3> ----> b = 3</h3>
         <h3> ----> c = "7"</h3>
-    <h3>la suma de a + b = <?=$suma?></h3>
-    <h3>la resta de a - b = <?=$resta?></h3>
-    <h3>la multiplicacion de a x b = <?=$multi?></h3>
-    <h3>la Potencia de a elevado a la b = <?=$poten?></h3>
-    <h3>la Division de a / b = <?=$divi?></h3>
-    <h3>la El residuo de dividir o el resto de a / b = <?=$modulo?></h3>
-    <h3>la identidad (convetir una variable string a int) de c es = <?=$ident?></h3>
-    <h3>la negacion del valor de "a" es :: <?=$negac?></h3>
+    <h3>valor de a es igual al valor de b? a==b? :: <?=$igualdad?></h3>
+    
 </body>
 </html>
