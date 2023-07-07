@@ -1,36 +1,32 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Selección de opciones</title>
-    
+    <title>Ejemplo de HTML, JavaScript y PHP con checkboxes</title>
 </head>
 <body>
-<script>
-      var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-      var maxSelections = 2;
 
-      checkboxes.forEach(function(checkbox) {
-        checkbox.addEventListener('change', function() {
-          var numSelected = document.querySelectorAll('input[type="checkbox"]:checked').length;
-          
-          if (numSelected > maxSelections) {
-            this.checked = false;
-          }
-        });
-      });
-  </script>
+<h1>Ejemplo de HTML, JavaScript y PHP con checkboxes</h1>
 
-<form action="procesar.php" method="GET">
-  <input type="checkbox" name="opcion[]" value="opcion1"> Opción 1<br>
-  <input type="checkbox" name="opcion[]" value="opcion2"> Opción 2<br>
-  <input type="checkbox" name="opcion[]" value="opcion3"> Opción 3<br>
-  <input type="checkbox" name="opcion[]" value="opcion4"> Opción 4<br>
-  <input type="checkbox" name="opcion[]" value="opcion5"> Opción 5<br>
-  <input type="checkbox" name="opcion[]" value="opcion6"> Opción 6<br>
-  
-  <input type="submit" value="Enviar">
+<form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <input type="checkbox" name="opcion[]" value="Opción 1"> Opción 1<br>
+    <input type="checkbox" name="opcion[]" value="Opción 2"> Opción 2<br>
+    <input type="checkbox" name="opcion[]" value="Opción 3"> Opción 3<br>
+    <br>
+    <input type="submit" name="submit" value="Enviar">
 </form>
+
+<?php
+if (isset($_POST['submit'])) {
+    if (!empty($_POST['opcion'])) {
+        echo "<h2>Opciones seleccionadas:</h2>";
+        foreach ($_POST['opcion'] as $opcion) {
+            echo $opcion . "<br>";
+        }
+    } else {
+        echo "<h2>No se ha seleccionado ninguna opción.</h2>";
+    }
+}
+?>
 
 </body>
 </html>
