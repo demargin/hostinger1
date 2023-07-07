@@ -11,7 +11,7 @@
         checkbox.addEventListener('change', function() {
           var checkedCount = document.querySelectorAll('input[type="checkbox"]:checked').length;
 
-          if (checkedCount > 2) {
+          if (checkedCount > 1) {
             checkboxes.forEach(function(checkbox) {
               if (!checkbox.checked) {
                 checkbox.disabled = true;
