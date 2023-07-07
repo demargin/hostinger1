@@ -6,6 +6,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temporal para pruebas</title>
+    <script>
+      var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      var maxSelections = 2;
+    
+      checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+          var numSelected = document.querySelectorAll('input[type="checkbox"]:checked').length;
+          
+          if (numSelected > maxSelections) {
+            this.checked = false;
+          }
+        });
+      });
+    </script>
 </head>
 <body>
   <form action="procesar.php" method="GET">
