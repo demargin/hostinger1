@@ -13,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $igualdad = ($selected[0] == $selected[1]) ? "Los valores son iguales" : "Los valores son diferentes";
 $identico = ($selected[0] === $selected[1]) ? "Los valores son identicos" : "Los valores son diferentes";
+
 ?>
 
 <!DOCTYPE html>
@@ -49,9 +50,9 @@ $identico = ($selected[0] === $selected[1]) ? "Los valores son identicos" : "Los
   <form method="POST">
     <input type="checkbox" name="option[]" value=3> 3<br>
     <input type="checkbox" name="option[]" value=5> 5<br>
-    <input type="checkbox" name="option[]" value="5"> "5"<br>
-    <input type="checkbox" name="option[]" value=7> 7<br>
-    <input type="checkbox" name="option[]" value=11> 11<br>
+    <input type="checkbox" name="option[]" value="5">"5"<br>
+    <input type="checkbox" name="option[]" value=7>7<br>
+    <input type="checkbox" name="option[]" value=11>11<br>
     <br>
     <input type="submit" value="Seleccionar">
   </form>
