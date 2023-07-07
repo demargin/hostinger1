@@ -10,6 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $selected[] = $option;
   }
 }
+
+$igualdad = ($selected[0] == $selected[1]) ? "Los valores son iguales" : "Los valores son diferentes";
+
 ?>
 
 <!DOCTYPE html>
@@ -43,22 +46,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
   <form method="POST">
-    <input type="checkbox" name="option[]" value="Opción 1"> Opción 1<br>
-    <input type="checkbox" name="option[]" value="Opción 2"> Opción 2<br>
-    <input type="checkbox" name="option[]" value="Opción 3"> Opción 3<br>
-    <input type="checkbox" name="option[]" value="Opción 4"> Opción 4<br>
-    <input type="checkbox" name="option[]" value="Opción 5"> Opción 5<br>
+    <input type="checkbox" name="option[]" value=3> 3<br>
+    <input type="checkbox" name="option[]" value=5> 5<br>
+    <input type="checkbox" name="option[]" value="5"> "5"<br>
+    <input type="checkbox" name="option[]" value=7> 7<br>
+    <input type="checkbox" name="option[]" value=11> 11<br>
     <br>
-    <input type="submit" value="Enviar">
+    <input type="submit" value="Seleccionar">
   </form>
-
-  <?php if (isset($selected) && !empty($selected)): ?>
     <div>
-      Opciones seleccionadas:<br>
-      <?php foreach ($selected as $option): ?>
-        <?php echo $option; ?><br>
-      <?php endforeach; ?>
+    <ul>
+      <li><h4>Igualdad(==) ::</h4><?echo $selected[0] . "==" . $selected[1] . "?:: " . $igualdad?></li>
+    </ul>  
     </div>
-  <?php endif; ?>
 </body>
 </html>
