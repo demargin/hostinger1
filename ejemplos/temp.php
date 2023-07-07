@@ -3,9 +3,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Obtener las opciones seleccionadas
   $selectedOptions = $_POST["option"];
 
-  // Almacenar las opciones seleccionadas en variables individuales
-  foreach ($selectedOptions as $key => $value) {
-    ${"option" . ($key + 1)} = $value;
+  // Almacenar las opciones seleccionadas en un array
+  $selected = [];
+
+  foreach ($selectedOptions as $option) {
+    $selected[] = $option;
   }
 }
 ?>
@@ -50,14 +52,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="submit" value="Enviar">
   </form>
 
-  <?php if (isset($option1)): ?>
+  <?php if (isset($selected) && !empty($selected)): ?>
     <div>
-      Opción 1: <?php echo $option1; ?><br>
-      Opción 2: <?php echo $option2; ?><br>
-      Opción 3: <?php echo $option3; ?><br>
-      Opción 4: <?php echo $option4; ?><br>
-      Opción 5: <?php echo $option5; ?><br>
+      Opciones seleccionadas:<br>
+      <?php foreach ($selected as $option): ?>
+        <?php echo $option; ?><br>
+      <?php endforeach; ?>
     </div>
   <?php endif; ?>
-  </body>
+</body>
 </html>
