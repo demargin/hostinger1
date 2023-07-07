@@ -3,15 +3,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Obtener las opciones seleccionadas
   $selectedOptions = $_POST["option"];
 
-  // Guardar las opciones seleccionadas en variables individuales
-  $option1 = isset($selectedOptions["option1"]) ? $selectedOptions["option1"] : "";
-  $option2 = isset($selectedOptions["option2"]) ? $selectedOptions["option2"] : "";
-  $option3 = isset($selectedOptions["option3"]) ? $selectedOptions["option3"] : "";
-  $option4 = isset($selectedOptions["option4"]) ? $selectedOptions["option4"] : "";
-  $option5 = isset($selectedOptions["option5"]) ? $selectedOptions["option5"] : "";
-
-  // Aquí puedes realizar cualquier procesamiento adicional con las opciones seleccionadas
-  // ...
+  // Guardar las opciones seleccionadas en una variable
+  $selected = implode(", ", $selectedOptions);
 }
 ?>
 
@@ -65,6 +58,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <br>
     <input type="submit" value="Enviar">
   </form>
+
+  <?php if (isset($selected)): ?>
+    <div>
+      Opciones seleccionadas: <?php echo $selected; ?>
+    </div>
+  <?php endif; ?>
 
   <div id="result"></div>
 </body>
