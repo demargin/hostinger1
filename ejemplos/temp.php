@@ -63,7 +63,8 @@ $identico = ($selected[0] === $selected[1]) ? "Los valores son identicos" : "Los
       </li>
 
       <li><h4>Identico (===) >> es decir si son iguales y del mismo tipo ::</h4>
-          <?echo $selected[0] . " === " . $selected[1] . " ?:: " . $identico ?>
+          <?echo $selected[0] . " === " . $selected[1] . " ?:: " . $identico ?><br>
+          <?echo gettype($selected[0]) . "\n" . gettype($selected[1]); ?>
       </li>
 
       <li><h4>Igualdad (==) ::</h4>
