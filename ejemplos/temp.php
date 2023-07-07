@@ -56,7 +56,9 @@ $igualdad = ($selected[0] == $selected[1]) ? "Los valores son iguales" : "Los va
   </form>
     <div>
     <ul>
-      <li><h4>Igualdad(==) ::</h4><?echo $selected[0] . "==" . $selected[1] . "?:: " . $igualdad?></li>
+      <li><h4>Igualdad(==) ::</h4>
+          <?echo $selected[0] . " == " . $selected[1] . " ?:: " . $igualdad?>
+      </li>
     </ul>  
     </div>
 </body>
