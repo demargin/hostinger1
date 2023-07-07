@@ -16,13 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Código JavaScript aquí
     window.onload = function() {
       var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-      var resultDiv = document.getElementById('result');
 
       checkboxes.forEach(function(checkbox) {
         checkbox.addEventListener('change', function() {
           var checkedCount = document.querySelectorAll('input[type="checkbox"]:checked').length;
 
-          if (checkedCount > 2) {
+          if (checkedCount > 1) {
             checkboxes.forEach(function(checkbox) {
               if (!checkbox.checked) {
                 checkbox.disabled = true;
@@ -34,16 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             });
           }
         });
-      });
-
-      // Actualizar el elemento 'result' al enviar el formulario
-      document.getElementById('myForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        var checkedOptions = document.querySelectorAll('input[type="checkbox"]:checked');
-        var selectedOptions = Array.from(checkedOptions).map(function(checkbox) {
-          return checkbox.value;
-        });
-        resultDiv.textContent = "Opciones seleccionadas: " + selectedOptions.join(", ");
       });
     }
   </script>
