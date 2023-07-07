@@ -3,7 +3,10 @@
 <html>
 <head>
     <title>Selección de opciones</title>
-    <script>
+    
+</head>
+<body>
+<script>
       var checkboxes = document.querySelectorAll('input[type="checkbox"]');
       var maxSelections = 2;
 
@@ -18,8 +21,6 @@
       });
   </script>
 
-</head>
-<body>
 <form action="procesar.php" method="GET">
   <input type="checkbox" name="opcion[]" value="opcion1"> Opción 1<br>
   <input type="checkbox" name="opcion[]" value="opcion2"> Opción 2<br>
