@@ -3,8 +3,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Obtener las opciones seleccionadas
   $selectedOptions = $_POST["option"];
 
-  // Guardar las opciones seleccionadas en una variable
-  $selected = implode(", ", $selectedOptions);
+  // Almacenar las opciones seleccionadas en variables individuales
+  foreach ($selectedOptions as $key => $value) {
+    ${"option" . ($key + 1)} = $value;
+  }
 }
 ?>
 
@@ -38,22 +40,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </script>
 </head>
 <body>
-  <form id="myForm" method="POST">
-    <input type="checkbox" name="option[option1]" value="Opción 1"> Opción 1<br>
-    <input type="checkbox" name="option[option2]" value="Opción 2"> Opción 2<br>
-    <input type="checkbox" name="option[option3]" value="Opción 3"> Opción 3<br>
-    <input type="checkbox" name="option[option4]" value="Opción 4"> Opción 4<br>
-    <input type="checkbox" name="option[option5]" value="Opción 5"> Opción 5<br>
+  <form method="POST">
+    <input type="checkbox" name="option[]" value="Opción 1"> Opción 1<br>
+    <input type="checkbox" name="option[]" value="Opción 2"> Opción 2<br>
+    <input type="checkbox" name="option[]" value="Opción 3"> Opción 3<br>
+    <input type="checkbox" name="option[]" value="Opción 4"> Opción 4<br>
+    <input type="checkbox" name="option[]" value="Opción 5"> Opción 5<br>
     <br>
     <input type="submit" value="Enviar">
   </form>
 
-  <?php if (isset($selected)): ?>
+  <?php if (isset($option1)): ?>
     <div>
-      Opciones seleccionadas: <?php echo $selected; ?>
+      Opción 1: <?php echo $option1; ?><br>
+      Opción 2: <?php echo $option2; ?><br>
+      Opción 3: <?php echo $option3; ?><br>
+      Opción 4: <?php echo $option4; ?><br>
+      Opción 5: <?php echo $option5; ?><br>
     </div>
   <?php endif; ?>
-
-  <div id="result"></div>
-</body>
+  </body>
 </html>
